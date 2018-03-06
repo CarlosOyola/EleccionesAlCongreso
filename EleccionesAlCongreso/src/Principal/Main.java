@@ -60,10 +60,10 @@ public class Main {
             Candidato Obj9 = new Candidato("luis","moreno",1088329825,37,8932071,"Cra 66","medellin","Partido Mira");
             do{
                 System.out.println("Seleccione el partido por el cual quiere votar"
-                +"1.Partido Polo"
-                +"2.Partido Liberal"
-                +"3.Partido Verde"
-                +"4.Partido Mira"
+                +"1.Partido Polo\n"
+                +"2.Partido Liberal\n"
+                +"3.Partido Verde\n"
+                +"4.Partido Mira\n"
                 +"opcion: ");
                 votoPart = sc.nextInt();
             }while(votoPart<1);
@@ -71,12 +71,12 @@ public class Main {
             switch(votoPart){
                 case 1:
                     do{
-                        System.out.println("PARTIDO POLO\n"
+                        System.out.println("PARTIDO POLO"
                         +"\n1.Candidato 1"+Obj1.datosCandidato()
                         +"\n2.Candidato 2"+Obj2.datosCandidato()
                         +"\n3.Candidato 3"+Obj3.datosCandidato()
                         +"\nEscoja el candidato por el cual va a votar"
-                        +"opcion: ");
+                        +"\nopcion: ");
                         votar = sc.nextInt();
                     }while(votar<1);
                     //la funcion if va a contar los votos de los candidatos del partido polo
@@ -101,7 +101,7 @@ public class Main {
                         +"\n1.Candidato 1 "+Obj4.datosCandidato()
                         +"\n1.Candidato 2 "+Obj5.datosCandidato()
                         +"\nEscoja el candidato por el cual va a votar "
-                        +"opcion: ");
+                        +"\nopcion: ");
                         votar = sc.nextInt();
                     }while(votar<1);
                     //la funcion if va a contar los votos de los candidatos del partido liberal
@@ -121,7 +121,7 @@ public class Main {
                         +"\n1.Candidato 1"+Obj6.datosCandidato()
                         +"\n2.Candidato 2"+Obj7.datosCandidato()
                         +"\nEscoja el candidato por el cual va a votar"
-                        +"opcion: ");
+                        +"\nopcion: ");
                         votar = sc.nextInt();
                     }while(votar<1);
                     //la funcion if va a contar los votos de los candidatos del partido verde
@@ -140,7 +140,7 @@ public class Main {
                         +"\n1.Candidato 1"+Obj8.datosCandidato()
                         +"\n2.Candidato 2"+Obj9.datosCandidato()
                         +"\nEscoja el candidato por el cual va a votar"
-                        +"opcion: ");
+                        +"\nopcion: ");
                         votar = sc.nextInt();
                     }while(votar<1);
                     //la funcion if va a contar los votos de los candidatos del partido mira
@@ -181,42 +181,42 @@ public class Main {
             Candidato Obj9 = new Candidato("luis","moreno",1088329825,37,8932071,"Cra 66","medellin","Partido Mira");
             int menuA;
             do{
-                System.out.println("Menu Administrador");
-                System.out.println("1.Calculo total de votos por candidato");
-                System.out.println("2.Calculo total de votos por partido");
-                System.out.println("3.Costo promedio por partido político");
+                System.out.println("Menu Administrador\n");
+                System.out.println("\n1.Calculo total de votos por candidato");
+                System.out.println("\n2.Calculo total de votos por partido");
+                System.out.println("\n3.Costo promedio por partido político");
                 menuA = sc.nextInt();
             }while(menuA<1);
             switch(menuA){
                 case 1:
-                    System.out.println("\tvotos por candidato");
-                    System.out.println("Candidato 1 \n"+Obj1.datosCandidato()+"Total votos: "+votoCand1);
-                    System.out.println("Candidato 2 \n"+Obj2.datosCandidato()+"Total votos: "+votoCand2);
-                    System.out.println("Candidato 3 \n"+Obj3.datosCandidato()+"Total votos: "+votoCand3);
-                    System.out.println("Candidato 4 \n"+Obj4.datosCandidato()+"Total votos: "+votoCand4);
-                    System.out.println("Candidato 5 \n"+Obj5.datosCandidato()+"Total votos: "+votoCand5);
-                    System.out.println("Candidato 6 \n"+Obj6.datosCandidato()+"Total votos: "+votoCand6);
-                    System.out.println("Candidato 7 \n"+Obj7.datosCandidato()+"Total votos: "+votoCand7);
-                    System.out.println("Candidato 8 \n"+Obj8.datosCandidato()+"Total votos: "+votoCand8);
-                    System.out.println("Candidato 9 \n"+Obj9.datosCandidato()+"Total votos: "+votoCand9);
+                    System.out.println("\tvotos por candidato\n");
+                    System.out.println("\nCandidato 1 "+Obj1.datosCandidato()+"Total votos: "+votoCand1);
+                    System.out.println("\nCandidato 2 "+Obj2.datosCandidato()+"Total votos: "+votoCand2);
+                    System.out.println("\nCandidato 3 "+Obj3.datosCandidato()+"Total votos: "+votoCand3);
+                    System.out.println("\nCandidato 4 "+Obj4.datosCandidato()+"Total votos: "+votoCand4);
+                    System.out.println("\nCandidato 5 "+Obj5.datosCandidato()+"Total votos: "+votoCand5);
+                    System.out.println("\nCandidato 6 "+Obj6.datosCandidato()+"Total votos: "+votoCand6);
+                    System.out.println("\nCandidato 7 "+Obj7.datosCandidato()+"Total votos: "+votoCand7);
+                    System.out.println("\nCandidato 8 "+Obj8.datosCandidato()+"Total votos: "+votoCand8);
+                    System.out.println("\nCandidato 9 "+Obj9.datosCandidato()+"Total votos: "+votoCand9);
                 break;
                 case 2:
-                    System.out.println("\tvotos por partido");
-                    System.out.println("Polo: "+votoPolo);
-                    System.out.println("Liberal: "+votoLiberal);
-                    System.out.println("Verde: "+votoVerde);
-                    System.out.println("Mira: "+votoMira);
+                    System.out.println("\tvotos por partido\n");
+                    System.out.println("\nPolo: "+votoPolo);
+                    System.out.println("\nLiberal: "+votoLiberal);
+                    System.out.println("\nVerde: "+votoVerde);
+                    System.out.println("\nMira: "+votoMira);
                 break;
                 case 3:
-                    System.out.println("promedio del coste por partido político");
+                    System.out.println("promedio del coste por partido político\n");
                     promoMira=campMira/votoMira;
                     promoPolo=campPolo/votoPolo;
                     promoLiberal=campLiberal/votoLiberal;
                     promoVerde=campVerde/votoVerde;
-                    System.out.println("Polo: "+promoPolo);
-                    System.out.println("Liberal: "+promoLiberal);
-                    System.out.println("Verde: "+promoVerde);
-                    System.out.println("Mira: "+promoMira);
+                    System.out.println("\nPolo: "+promoPolo);
+                    System.out.println("\nLiberal: "+promoLiberal);
+                    System.out.println("\nVerde: "+promoVerde);
+                    System.out.println("\nMira: "+promoMira);
                 break;
             }
         }
