@@ -12,6 +12,7 @@ import java.util.Scanner;
  * @author holma
  */
 public class Main {
+<<<<<<< refs/remotes/origin/master
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Partidos obj11 = new Partidos();
@@ -223,3 +224,202 @@ public class Main {
     }
 }
     
+=======
+
+    public static void main(String[] arg) {
+        Scanner sc = new Scanner(System.in);
+        int menu = 0;
+        //guarda el partido por el cual se va a votar
+        int votoPart = 0;
+        int votar = 0;
+        //variables para asignarle el costo de las campañas politicas
+        long campPolo = 3_000_000_000L, campLiberal = 2_000_000_000L, campVerde = 1_000_000_000L, campMira = 500_000_000L;
+        //variables para obtener cantidad de votos para cada candidato
+        int votoCand1 = 0, votoCand2 = 0, votoCand3 = 0, votoCand4 = 0, votoCand5 = 0, votoCand6 = 0, votoCand7 = 0, votoCand8 = 0, votoCand9 = 0;
+        //variables para obtener la cantidad total de votos por partido
+        int votoPolo = 0, votoLiberal = 0, votoVerde = 0, votoMira = 0;
+        //variable para aumento de precio de campaña
+        int aumentoCamp = 0;
+        //variables para obtener el promedio
+        long promoPolo = 0, promoLiberal, promoVerde, promoMira;
+        while (menu != 3) {
+            Candidato Obj1 = new Candidato("yeison", "ramirez", 1028308210, 40, 8382832, "Cll 43", "bogota", "Partido Polo");
+            Candidato Obj2 = new Candidato("victor", "beltran", 829013, 37, 8438248, "Cra 63", "facatativa", "Partido Polo");
+            Candidato Obj3 = new Candidato("jose", "segura", 1070989508, 56, 8234497, "Cra 65", "bogota", "Partido Polo");
+            Candidato Obj4 = new Candidato("samuel", "zarate", 2189080, 47, 8493294, "Cra 67", "medellin", "Partido Liberal");
+            Candidato Obj5 = new Candidato("yesid", "molina", 839218390, 43, 8843428, "Cll 68", "cali", "Partido Liberal");
+            Candidato Obj6 = new Candidato("diego", "muños", 1298017, 46, 8342057, "Cll 42", "pereira", "Partido Verde");
+            Candidato Obj7 = new Candidato("brayan", "rodriguez", 189028, 55, 8321484, "Cll 45", "ibague", "Partido Verde");
+            Candidato Obj8 = new Candidato("fabian", "caro", 20883923, 42, 8213709, "Cra 34", "antioquia", "Partido Mira");
+            Candidato Obj9 = new Candidato("luis", "moreno", 1088329825, 37, 8932071, "Cra 66", "medellin", "Partido Mira");
+            System.out.print("\tMENU PRINCIPAL"
+                    + "\n1.votar"
+                    + "\n2.administracion de votos y costos"
+                    + "\n3.salir\n"
+                    + "\nopcion: ");
+            menu = sc.nextInt();
+            switch (menu) {
+                case 1:
+                    while (votoPart != 5) {
+                        System.out.println("\t\nSeleccione el partido por el cual quiere votar"
+                                + "\n1.Partido Polo"
+                                + "\n2.Partido Liberal"
+                                + "\n3.Partido Verde"
+                                + "\n4.Partido Mira"
+                                + "\n5.salir\n"
+                                + "\nopcion: ");
+                        votoPart = sc.nextInt();
+                        Prublicidad Obj10 = new Prublicidad();
+                        switch (votoPart) {
+                            case 1:
+                                while (votar != 4) {
+                                    System.out.println("\t\nPARTIDO POLO"
+                                            + "\n1.Candidato 1\n" + Obj1.datosCandidato()
+                                            + "\n2.Candidato 2\n" + Obj2.datosCandidato()
+                                            + "\n3.Candidato 3\n" + Obj3.datosCandidato()
+                                            + "\n4.salir\n"
+                                            + "\nEscoja el candidato por el cual va a votar"
+                                            + "\nopcion: ");
+                                    votar = sc.nextInt();
+                                    //la funcion if va a contar los votos de los candidatos del partido polo
+                                    switch(votar){
+                                        case 1:
+                                            votoCand1 += 1;
+                                            break;
+                                        case 2:
+                                            votoCand2 += 1;
+                                            break;
+                                        case 3:
+                                            votoCand3 += 1;
+                                            break;
+                                    }
+                                    aumentoCamp = Obj10.Publicidad();
+                                    campPolo += aumentoCamp;
+                                    votoPolo += 1;
+                                    break;
+                                }
+                                break;
+                            case 2:
+                                while (votar != 3) {
+                                    System.out.println("\t\nPARTIDO LIBERAL"
+                                            + "\n1.Candidato 1 \n" + Obj4.datosCandidato()
+                                            + "\n2.Candidato 2 \n" + Obj5.datosCandidato()
+                                            + "\n3.salir\n"
+                                            + "\nEscoja el candidato por el cual va a votar "
+                                            + "\nopcion: ");
+                                    votar = sc.nextInt();
+                                    //la funcion if va a contar los votos de los candidatos del partido liberal
+                                    switch(votar){
+                                        case 1:
+                                            votoCand4 += 1;
+                                            break;
+                                        case 2:
+                                            votoCand5 += 1;
+                                            break;
+                                    }
+                                    aumentoCamp = Obj10.Publicidad();
+                                    campLiberal += aumentoCamp;
+                                    votoLiberal += 1;
+                                    break;
+                                }
+                                break;
+                            case 3:
+                                while (votar != 3) {
+                                    System.out.println("\t\nPARTIDO VERDE"
+                                            + "\n1.Candidato 1 \n" + Obj6.datosCandidato()
+                                            + "\n2.Candidato 2 \n" + Obj7.datosCandidato()
+                                            + "\n3.salir\n"
+                                            + "\nEscoja el candidato por el cual va a votar"
+                                            + "\nopcion: ");
+                                    votar = sc.nextInt();
+                                    //la funcion if va a contar los votos de los candidatos del partido verde
+                                    switch(votar){
+                                        case 1:
+                                            votoCand6 += 1;
+                                            break;
+                                        case 2:
+                                            votoCand7 += 1;
+                                            break;
+                                    }
+                                    aumentoCamp = Obj10.Publicidad();
+                                    campVerde += aumentoCamp;
+                                    votoVerde += 1;
+                                    break;
+                                }
+                                break;
+                            case 4:
+                                while (votar != 3) {
+                                    System.out.println("\t\nPARTIDO MIRA"
+                                            + "\n1.Candidato 1\n" + Obj8.datosCandidato()
+                                            + "\n2.Candidato 2\n" + Obj9.datosCandidato()
+                                            + "\n3.salir\n"
+                                            + "\nEscoja el candidato por el cual va a votar"
+                                            + "\nopcion: ");
+                                    votar = sc.nextInt();
+                                    //la funcion if va a contar los votos de los candidatos del partido mira
+                                    switch(votar){
+                                        case 1:
+                                            votoCand8 += 1;
+                                            break;
+                                        case 2:
+                                            votoCand9 += 1;
+                                            break;
+                                    }
+                                    aumentoCamp = Obj10.Publicidad();
+                                    campMira += aumentoCamp;
+                                    votoMira += 1;
+                                    break;
+                                }
+                                break;
+                        }break;
+                    }
+                    break;
+                case 2:
+                    int menuA = 0;
+                    while (menuA != 4) {
+                        System.out.println("\t\nMenu Administrador");
+                        System.out.println("1.Calculo total de votos por candidato");
+                        System.out.println("2.Calculo total de votos por partido");
+                        System.out.println("3.Costo por partido político");
+                        System.out.println("4.salir");
+                        System.out.println("opcion: ");
+                        menuA = sc.nextInt();
+                        switch (menuA) {
+                            case 1:
+                                System.out.println("\t\nvotos por candidato");
+                                System.out.println("Candidato 1 \n" + Obj1.datosCandidato() + "\nTotal votos: \n" + votoCand1);
+                                System.out.println("Candidato 2 \n" + Obj2.datosCandidato() + "\nTotal votos: \n" + votoCand2);
+                                System.out.println("Candidato 3 \n" + Obj3.datosCandidato() + "\nTotal votos: \n" + votoCand3);
+                                System.out.println("Candidato 4 \n" + Obj4.datosCandidato() + "\nTotal votos: \n" + votoCand4);
+                                System.out.println("Candidato 5 \n" + Obj5.datosCandidato() + "\nTotal votos: \n" + votoCand5);
+                                System.out.println("Candidato 6 \n" + Obj6.datosCandidato() + "\nTotal votos: \n" + votoCand6);
+                                System.out.println("Candidato 7 \n" + Obj7.datosCandidato() + "\nTotal votos: \n" + votoCand7);
+                                System.out.println("Candidato 8 \n" + Obj8.datosCandidato() + "\nTotal votos: \n" + votoCand8);
+                                System.out.println("Candidato 9 \n" + Obj9.datosCandidato() + "\nTotal votos: \n" + votoCand9);
+                                break;
+                            case 2:
+                                System.out.println("\t\nvotos por partido");
+                                System.out.println("Polo: " + votoPolo);
+                                System.out.println("Liberal: " + votoLiberal);
+                                System.out.println("Verde: " + votoVerde);
+                                System.out.println("Mira: " + votoMira);
+                                break;
+                            case 3:
+                                
+                                System.out.println("\t\npromedio del coste por partido político");
+                                System.out.println("Polo: " + promoPolo);
+                                System.out.println("Liberal: ");
+                                System.out.println("Verde: ");
+                                System.out.println("Mira: ");
+
+                                break;
+                        }
+                    }
+            }
+            break;
+        }
+
+    }
+
+}
+>>>>>>> todo
